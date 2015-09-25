@@ -10,3 +10,8 @@ The system is based on Movie Database by @TobiasFlohre.
 - Movie Database https://github.com/tobiasflohre/movie-database
 - Apache Kafka http://kafka.apache.org/
 
+## Overview
+
+The final will look like the following diagram:
+
+![Planned Shopping System](https://blog.codecentric.de/files/2015/08/BPMNVsMicroservices.png "Event Based Shopping System")
