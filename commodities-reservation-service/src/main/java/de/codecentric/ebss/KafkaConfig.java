@@ -4,21 +4,21 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CommoditiesReservationKafkaConfig {
+public class KafkaConfig {
 
     @Value("${kafka.topic:" + CommoditiesReservationApplication.ORDER_CREATED_EVENT + "}")
     private String topic;
 
-	@Value("${kafka.address:192.168.99.100:32777}")
+	@Value("${kafka.address:localhost:9092}")
 	private String brokerAddress;
 
-	@Value("${zookeeper.address:192.168.99.100:32776}")
+	@Value("${zookeeper.address:localhost:2181}")
 	private String zookeeperAddress;
 
-    CommoditiesReservationKafkaConfig() {
+    KafkaConfig() {
     }
 
-    public CommoditiesReservationKafkaConfig(String t, String b, String zk) {
+    public KafkaConfig(String t, String b, String zk) {
         this.topic = t;
         this.brokerAddress = b;
         this.zookeeperAddress = zk;

@@ -20,7 +20,7 @@ import org.springframework.integration.kafka.support.ZookeeperConnect;
 public class CommoditiesReservationConsumerConfiguration {
 
 	@Autowired
-	private CommoditiesReservationKafkaConfig kafkaConfig;
+	private KafkaConfig kafkaConfig;
 
 	private Log log = LogFactory.getLog(getClass());
 
