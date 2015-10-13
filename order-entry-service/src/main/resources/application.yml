@@ -1,0 +1,21 @@
+kafka:
+  address: 192.168.99.100:32777
+  topic:
+    order:
+      created: OrderCreatedEvent
+
+zookeeper:
+  address: 192.168.99.100:32776
+
+spring:
+  application:
+    name: orderEntryService
+  boot:
+    admin:
+      url: http://localhost:8888
+info:
+  version: 0.0.1
+  stage: test
+
+logging:
+  file: /tmp/event-based-shopping-system/logs/@pom.artifactId@/@pom.artifactId@.log
