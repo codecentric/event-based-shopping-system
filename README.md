@@ -1,4 +1,4 @@
-## Event Based Shopping System (EBSS)
+## Event-Based-Shopping-System (EBSS)
 
 This project is a proof of concept for an event-based-shopping-system (EBSS) using Spring Boot and Apache Kafka. As a result of an article by Tobias Flohre, we want to implement the event based system described in the blog. For more information I suggest you read up the article first.
 
@@ -115,3 +115,11 @@ This is another message
 ```
 
 For more details see http://kafka.apache.org/documentation.html#quickstart
+
+## Maven projects
+
+To build all Maven projects please run:
+
+```
+mvn clean install
+```
