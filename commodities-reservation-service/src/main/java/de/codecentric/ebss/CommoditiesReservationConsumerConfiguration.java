@@ -1,7 +1,7 @@
 package de.codecentric.ebss;
 
-import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,13 +16,18 @@ import org.springframework.integration.dsl.kafka.KafkaHighLevelConsumerMessageSo
 import org.springframework.integration.dsl.support.Consumer;
 import org.springframework.integration.kafka.support.ZookeeperConnect;
 
+import de.codecentric.ebss.service.OrderEntryService;
+
 @Configuration
 public class CommoditiesReservationConsumerConfiguration {
 
+	private Log log = LogFactory.getLog(getClass());
+
+	@Autowired 
+	private OrderEntryService orderEntryService;
+	
 	@Autowired
 	private KafkaConfig kafkaConfig;
-
-	private Log log = LogFactory.getLog(getClass());
 
 	@Bean
 	IntegrationFlow consumer() {
@@ -42,19 +47,17 @@ public class CommoditiesReservationConsumerConfiguration {
 								.consumerTimeout(100)
 								.topicStreamMap(
 										m -> m.put(this.kafkaConfig.getTopic(),
-												1)).maxMessages(10)
+												1)).maxMessages(1)
 								.valueDecoder(String::new));
 
-		Consumer<SourcePollingChannelAdapterSpec> endpointConfigurer = e -> e
-				.poller(p -> p.fixedDelay(100));
+		Consumer<SourcePollingChannelAdapterSpec> endpointConfigurer = e -> e.poller(p -> p.fixedDelay(100));
 
 		return IntegrationFlows
 				.from(messageSourceSpec, endpointConfigurer)
-				.<Map<String, List<String>>> handle(
+				.<Map<String, ConcurrentHashMap<String, String>>> handle(
 						(payload, headers) -> {
 							payload.entrySet().forEach(
-									e -> log.info(e.getKey() + '='
-											+ e.getValue()));
+									e -> orderEntryService.createOrderEntryFromJson(e.getValue()));
 							return null;
 						}).get();
 	}

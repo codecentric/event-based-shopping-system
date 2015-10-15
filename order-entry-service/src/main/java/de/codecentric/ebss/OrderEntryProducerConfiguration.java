@@ -44,7 +44,7 @@ public class OrderEntryProducerConfiguration {
 	@DependsOn(OUTBOUND_ID)
 	CommandLineRunner kickOff(@Qualifier(OUTBOUND_ID + ".input") MessageChannel in) {
 		return args -> {
-			for (int i = 0; i < 50; i++) {
+			for (int i = 0; i < 100; i++) {
 				Address address = new Address(Locale.GERMANY.getDisplayCountry(), "Colonge", "50667", "Domkloster", "4");
 				Recipient recipient = new Recipient("Alexander", "Mustermann", address, address);
 				int amount = ThreadLocalRandom.current().nextInt(1, 15);
@@ -52,7 +52,7 @@ public class OrderEntryProducerConfiguration {
 				String bestellungAsJson = ow.writeValueAsString(bestellung);
 				in.send(new GenericMessage<String>(bestellungAsJson));
 				log.info("ordering movie with movieId-" + i + " " + bestellungAsJson);
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			}
 		};
 	}

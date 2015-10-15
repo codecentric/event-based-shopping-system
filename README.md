@@ -123,3 +123,9 @@ To build all Maven projects please run:
 ```
 mvn clean install
 ```
+
+To start the Spring Boot Apps use:
+
+```
+mvn spring-boot:run
+```
