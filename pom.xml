@@ -3,20 +3,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.codecentric.ebss</groupId>
-	<artifactId>event-based-shopping-system</artifactId>
-	<version>1.0.0</version>
-	<packaging>pom</packaging>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.2.3.RELEASE</version>
 	</parent>
 
+	<groupId>de.codecentric.ebss</groupId>
+	<artifactId>event-based-shopping-system</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<spring.boot.version>1.2.3.RELEASE</spring.boot.version>
+		<spring.boot.admin.version>1.2.3</spring.boot.admin.version>
 	</properties>
 
 	<modules>
@@ -30,24 +32,24 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-integration</artifactId>
-			<version>1.2.3.RELEASE</version>
+			<version>${spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>1.2.3.RELEASE</version>
+			<version>${spring.boot.version}</version>
 		</dependency>
 
 		<!-- Spring Boot Admin -->
 		<dependency>
 				<groupId>de.codecentric</groupId>
 				<artifactId>spring-boot-admin-server</artifactId>
-				<version>1.2.3</version>
+				<version>${spring.boot.admin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server-ui</artifactId>
-			<version>1.2.3</version>
+			<version>${spring.boot.admin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>
