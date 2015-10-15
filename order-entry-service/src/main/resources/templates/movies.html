@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: headTag" />
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Event-Based-Shopping-System</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+            <li><a href="#movies"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart </a></li>
+            <li><a href="#contact"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="teaser"></div><br/>
+    
+	<div class="container-fluid">
+
+	    <div class="row">
+			<div class="col-md-3 col-sm-6" th:each="movie : ${movies}">
+				<div class="product">
+					<div class="image">
+						<img th:src="${movie.image}" alt="product" class="img-responsive"/>
+					</div>
+					<div class="caption">
+						<h4><a href="movies/${movie.id}" th:text="${movie.title}">Movie Title</a></h4>
+						<div class="description">
+							<p th:text="${movie.description}">Description</p>
+						</div>
+						<div class="cart-button button-group">
+							<span class="price">10 Euro</span>
+							<button type="button" class="btn btn-cart">
+								Add to cart <i class="fa fa-shopping-cart"></i> 
+							</button>									
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    
+		
+      <footer>
+        <p>&copy; codecentric 2015</p>
+      </footer>
+      
+    </div> <!-- /container -->
+    
+</body>
+</html>

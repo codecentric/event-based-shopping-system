@@ -1,4 +1,4 @@
-package de.codecentric.ebss;
+package de.codecentric.ebss.kafka;
 
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
@@ -37,7 +37,7 @@ public class OrderEntryProducerConfiguration {
 	private static final String OUTBOUND_ID = "outbound";
 
 	private Log log = LogFactory.getLog(getClass());
-
+	
 	private ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
 	@Bean

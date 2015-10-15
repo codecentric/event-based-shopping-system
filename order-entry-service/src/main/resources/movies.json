@@ -1,0 +1,32 @@
+[
+	{
+		"title": "The Shawshank Redemption",
+		"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+		"year": 1994,
+		"image": "http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg"
+	},
+	{
+		"title": "The Godfather",
+		"description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+		"year": 1972,
+		"image": "http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg"
+	},
+	{
+		"title": "The Godfather: Part II",
+		"description": "The early life and career of Vito Corleone in 1920s New York is portrayed while his son, Michael, expands and tightens his grip on his crime syndicate stretching from Lake Tahoe, Nevada to pre-revolution 1958 Cuba.",
+		"year": 1974,
+		"image": "http://ia.media-imdb.com/images/M/MV5BNDc2NTM3MzU1Nl5BMl5BanBnXkFtZTcwMTA5Mzg3OA@@._V1_SX214_AL_.jpg"
+	},
+	{
+		"title": "The Dark Knight",
+		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+		"year": 2008,
+		"image": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY317_CR0,0,214,317_AL_.jpg"
+	},
+	{
+		"title": "12 Angry Men",
+		"description": "A dissenting juror in a murder trial slowly manages to convince the others that the case is not as obviously clear as it seemed in court.",
+		"year": 1957,
+		"image": "http://ia.media-imdb.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SX214_AL_.jpg"
+	}
+]

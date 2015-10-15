@@ -13,6 +13,8 @@ spring:
   boot:
     admin:
       url: http://localhost:8888
+      client:
+        url: http://localhost:8092/webshop
 
 info:
   version: @pom.version@
@@ -20,6 +22,7 @@ info:
 
 server:
     port: 8092
+    context-path: /webshop
 
 logging:
   file: /tmp/event-based-shopping-system/logs/@pom.artifactId@/@pom.version@.log

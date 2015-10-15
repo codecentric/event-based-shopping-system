@@ -1,7 +1,9 @@
-package de.codecentric.ebss;
+package de.codecentric.ebss.kafka;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import de.codecentric.ebss.OrderEntryApplication;
 
 @Component
 public class KafkaConfig {
