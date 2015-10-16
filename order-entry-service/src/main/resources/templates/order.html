@@ -22,7 +22,7 @@
         
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id="navbar" class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left">
+          <form class="navbar-form navbar-left" role="search">
 			  <div class="form-group">
 	            <div class="input-group">
 	              <input type="text" class="form-control" placeholder="Search"/>
@@ -43,25 +43,7 @@
     <div class="ebss-teaser"></div><br/>
     
 	<div class="container-fluid">
-		<div class="col-md-3 col-sm-6 col-xs-12" th:each="movie : ${movies}">
-			<div class="product">
-				<div class="image">
-					<img th:src="@{${movie.image}}" alt="product" class="img-responsive"/>
-				</div>
-				<div class="caption">
-					<h4><a href="#" th:href="@{${movie.getDetailLink()}}" th:text="${movie.title}">Movie Title</a></h4>
-					<div class="description">
-						<p th:text="${movie.shortDescription}">Description</p>
-					</div>
-					<div class="cart-button button-group">
-						<span class="price">10 Euro</span>
-						<button type="button" class="btn btn-cart">
-							Add to cart <i class="fa fa-shopping-cart"></i> 
-						</button>									
-					</div>
-				</div>
-			</div>
-		</div>
+		Movie ordered
     </div> <!-- /container -->
 
 	<div class="container">

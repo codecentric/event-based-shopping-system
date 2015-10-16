@@ -11,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.util.Assert;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +38,12 @@ public class InMemoryMovieService implements MovieService {
 		}
 	}
 
+	@Override
+	public Movie getMovieById(UUID id) {
+		Assert.notNull(id);
+		return movies.get(id);
+	}
+	
 	@Override
 	public Collection<Movie> findMovies(String searchString) {
 		return movies.values();

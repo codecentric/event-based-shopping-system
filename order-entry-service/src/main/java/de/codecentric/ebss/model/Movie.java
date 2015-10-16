@@ -15,15 +15,16 @@ public class Movie {
 	public Movie() {
 		this.id = UUID.randomUUID();
 	}
-	
-	public Movie(UUID id, String title, String description, Integer year, String image) {
+
+	public Movie(UUID id, String title, String description, Integer year,
+			String image) {
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.year = year;
 		this.image = image;
 	}
-	
+
 	public Movie(String title, String description, Integer year, String image) {
 		this(UUID.randomUUID(), title, description, year, image);
 	}
@@ -47,7 +48,7 @@ public class Movie {
 	public String getDescription() {
 		return description;
 	}
-	
+
 	public String getShortDescription() {
 		return StringUtils.abbreviate(description, 200);
 	}
@@ -70,6 +71,10 @@ public class Movie {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public String getDetailLink() {
+		return "movies/" + id;
 	}
 
 }

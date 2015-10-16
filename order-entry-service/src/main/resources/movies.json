@@ -3,54 +3,54 @@
 		"title": "The Shawshank Redemption",
 		"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
 		"year": 1994,
-		"image": "images/movies/the-shawnhawk-redemption.jpg"
+		"image": "/images/movies/the-shawnhawk-redemption.jpg"
 	},
 	{
 		"title": "The Godfather",
 		"description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
 		"year": 1972,
-		"image": "images/movies/the-godfather.jpg"
+		"image": "/images/movies/the-godfather.jpg"
 	},
 	{
 		"title": "The Godfather: Part II",
 		"description": "The early life and career of Vito Corleone in 1920s New York is portrayed while his son, Michael, expands and tightens his grip on his crime syndicate stretching from Lake Tahoe, Nevada to pre-revolution 1958 Cuba.",
 		"year": 1974,
-		"image": "images/movies/the-godfather-2.jpg"
+		"image": "/images/movies/the-godfather-2.jpg"
 	},
 	{
 		"title": "The Dark Knight",
 		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
 		"year": 2008,
-		"image": "images/movies/the-dark-knight.jpg"
+		"image": "/images/movies/the-dark-knight.jpg"
 	},
 	{
 		"title": "12 Angry Men",
 		"description": "A dissenting juror in a murder trial slowly manages to convince the others that the case is not as obviously clear as it seemed in court.",
 		"year": 1957,
-		"image": "images/movies/12-angry-men.jpg"
+		"image": "/images/movies/12-angry-men.jpg"
 	},
 	{
 		"title": "The Schindler's List",
 		"description": "In Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
 		"year": 1993,
-		"image": "images/movies/the-schindlers-list.jpg"
+		"image": "/images/movies/the-schindlers-list.jpg"
 	},
 	{
 		"title": "Pulp Fiction",
 		"description": "The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
 		"year": 1994,
-		"image": "images/movies/pulp-fiction.jpg"
+		"image": "/images/movies/pulp-fiction.jpg"
 	},
 	{
 		"title": "The Good, the Bad and the Ugly",
 		"description": "The early life and career of Vito Corleone in 1920s New York is portrayed while his son, Michael, expands and tightens his grip on his crime syndicate stretching from Lake Tahoe, Nevada to pre-revolution 1958 Cuba.",
 		"year": 1966,
-		"image": "images/movies/the-good-the-bad-the-ugly.jpg"
+		"image": "/images/movies/the-good-the-bad-the-ugly.jpg"
 	},
 	{
 		"title": "The Lord of the Rings: The Return of the King",
 		"description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
 		"year": 2003,
-		"image": "images/movies/lord-of-the-rings.jpg"
+		"image": "/images/movies/lord-of-the-rings.jpg"
 	}
 ]
