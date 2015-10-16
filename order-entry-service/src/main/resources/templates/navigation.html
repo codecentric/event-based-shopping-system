@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head/>
+<body>
+
+  <div th:fragment="topnavigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+      
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://github.com/codecentric/event-based-shopping-system">
+            <img class="ebss-brand" th:src="@{/images/ebss-logo-white.png}"/>
+          </a>
+        </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="navbar" class="collapse navbar-collapse">
+          <form class="navbar-form navbar-left">
+			  <div class="form-group">
+	            <div class="input-group">
+	              <input type="text" class="form-control" placeholder="Search"/>
+	              <span class="input-group-addon">
+	                <i class="fa fa-search fa-fw"></i>
+	              </span>
+				</div>
+			  </div>
+	      </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#movies"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart </a></li>
+            <li><a href="#contact"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </div>
+    
+  <div th:fragment="footernavigation">  
+    	<div class="container">
+	    <footer>
+	      <p>&copy; codecentric 2015</p>
+	    </footer>
+    </div> <!-- /container -->
+  </div>
+</body>
+</html>
