@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,9 +41,10 @@ public class MoviesController {
 		return "movieDetails";
 	}
 	
-	@RequestMapping(value = "{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "{id}/order", method = RequestMethod.GET)
 	public String orderMovie(@PathVariable UUID id, Model model) {
 		log.info("orderMovie with id " + id);
+		model.addAttribute("movie", movieService.getMovieById(id));
 		return "order";
 	}
 }

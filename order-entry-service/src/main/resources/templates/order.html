@@ -4,53 +4,22 @@
 <head th:replace="head :: headTag" />
 <body>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-      
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://www.codecentric.de">
-            <img class="ebss-brand" th:src="@{/images/ebss-logo-white.png}"/>
-          </a>
-        </div>
-        
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="navbar" class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left" role="search">
-			  <div class="form-group">
-	            <div class="input-group">
-	              <input type="text" class="form-control" placeholder="Search"/>
-	              <span class="input-group-addon">
-	                <i class="fa fa-search fa-fw"></i>
-	              </span>
-				</div>
-			  </div>
-	      </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#movies"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart </a></li>
-            <li><a href="#contact"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+	<div th:replace="navigation :: topnavigation"></div>
     
     <div class="ebss-teaser"></div><br/>
     
-	<div class="container-fluid">
-		Movie ordered
+	<div class="container">
+	    
+	    <ol class="breadcrumb">
+		  <li><a th:href="@{/}">Home</a></li>
+		</ol>
+		
+		<div class="alert alert-success">
+			Thank you for ordering <b><span th:text="${movie.title}">Movie</span></b>
+		</div>
     </div> <!-- /container -->
 
-	<div class="container">
-	    <footer>
-	      <p>&copy; codecentric 2015</p>
-	    </footer>
-    </div> <!-- /container -->
+	<div th:replace="navigation :: footernavigation"></div>
     
 </body>
 </html>

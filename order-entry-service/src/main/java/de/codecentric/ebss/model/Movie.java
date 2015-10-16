@@ -76,5 +76,9 @@ public class Movie {
 	public String getDetailLink() {
 		return "movies/" + id;
 	}
+	
+	public String getOrderLink() {
+		return "movies/" + id + "/order";
+	}
 
 }
