@@ -2,7 +2,9 @@
 
 <img src="order-entry-service/src/main/resources/static/images/ebss-logo.png" width="250px">
 
-This project is a proof of concept for an event-based-shopping-system (EBSS) using Spring Boot and Apache Kafka. As a result of an article by Tobias Flohre, we want to implement the event based system described in the blog. For more information I suggest you read up the article first.
+This project is a proof of concept for an event-based-shopping-system (EBSS) using Spring Boot and Apache Kafka. As a result of an article by Tobias Flohre, we decided to implement the event-based-system described in the blog. For more information I suggest you read up the article first.
+
+### Links
 
 - Blog article by Tobias Flohre https://blog.codecentric.de/2015/09/wer-microservices-richtig-macht-braucht-keine-workflow-engine-und-kein-bpmn/
 - Inspiration: Movie Database https://github.com/tobiasflohre/movie-database
