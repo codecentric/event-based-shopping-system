@@ -2,6 +2,8 @@ package de.codecentric.ebss.model;
 
 import java.util.UUID;
 
+import org.apache.commons.lang.StringUtils;
+
 public class Movie {
 
 	private UUID id;
@@ -44,6 +46,10 @@ public class Movie {
 
 	public String getDescription() {
 		return description;
+	}
+	
+	public String getShortDescription() {
+		return StringUtils.abbreviate(description, 200);
 	}
 
 	public void setDescription(String description) {

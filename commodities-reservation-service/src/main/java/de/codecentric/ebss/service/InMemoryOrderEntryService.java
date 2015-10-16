@@ -38,6 +38,5 @@ public class InMemoryOrderEntryService implements OrderEntryService {
 	@Override
 	public void createOrderEntryFromJson(ConcurrentHashMap<String, String> orderEntryJson) {
 		log.info("orderEntryJson :: " + orderEntryJson);
-		
 	}
 }
