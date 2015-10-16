@@ -27,5 +27,5 @@ public class ApplicationConfiguration extends WebMvcConfigurerAdapter {
 		super.addViewControllers(registry);
 		registry.addViewController("/").setViewName("redirect:/movies");
 	}
-
+	
 }

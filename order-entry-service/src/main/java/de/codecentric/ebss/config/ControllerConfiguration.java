@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+import de.codecentric.ebss.controller.ExceptionController;
 import de.codecentric.ebss.controller.MoviesController;
 
 @Configuration 
@@ -21,6 +22,11 @@ public class ControllerConfiguration {
 	@Bean
 	public MoviesController moviesController(){
 		return new MoviesController(serviceConfiguration.movieService());
+	}
+	
+	@Bean
+	public ExceptionController errorController(){
+		return new ExceptionController();
 	}
 	
 }

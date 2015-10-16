@@ -19,7 +19,12 @@
 		  	<h3 class="panel-title">Movie Details</h3>
 		  </div>
 		  <div class="panel-body">
-			<div class="row">
+		  	<div class="row" th:if="${movie == null}">
+		  	  <div class="col-md-4">
+		        <p>Movie details not available.</p>
+		      </div>
+		    </div>
+			<div class="row" th:if="${movie != null}">
 			  <div class="col-md-4">
 			  	<div class="image">
 					<img th:src="@{${movie.image}}" alt="product" class="img-responsive"/>
