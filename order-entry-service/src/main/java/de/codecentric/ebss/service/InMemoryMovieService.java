@@ -37,7 +37,7 @@ public class InMemoryMovieService implements MovieService {
 			e.printStackTrace();
 		}
 	}
-
+	
 	@Override
 	public Movie getMovieById(UUID id) {
 		Assert.notNull(id);

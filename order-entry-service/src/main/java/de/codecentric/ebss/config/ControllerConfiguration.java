@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Import;
 
 import de.codecentric.ebss.controller.ExceptionController;
 import de.codecentric.ebss.controller.MoviesController;
+import de.codecentric.ebss.kafka.KafkaConfig;
+import de.codecentric.ebss.kafka.OrderEntryProducerConfiguration;
 
 @Configuration 
-@Import(ServiceConfiguration.class)
+@Import({ServiceConfiguration.class, OrderEntryProducerConfiguration.class, KafkaConfig.class})
 public class ControllerConfiguration {
 	
 	@Value("${server.context-path}")
@@ -18,10 +20,13 @@ public class ControllerConfiguration {
 	
 	@Autowired
 	private ServiceConfiguration serviceConfiguration;
-
+	
+	@Autowired
+	private OrderEntryProducerConfiguration orderEntryConfig;
+	
 	@Bean
 	public MoviesController moviesController(){
-		return new MoviesController(serviceConfiguration.movieService());
+		return new MoviesController(serviceConfiguration.movieService(), orderEntryConfig.producer());
 	}
 	
 	@Bean

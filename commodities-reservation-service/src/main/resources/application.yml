@@ -1,11 +1,11 @@
 kafka:
-  address: 192.168.99.100:32777
+  address: 192.168.99.100:32799
   topic:
     order:
       created: OrderCreatedEvent
 
 zookeeper:
-  address: 192.168.99.100:32776
+  address: 192.168.99.100:32798
 
 spring:
   application:

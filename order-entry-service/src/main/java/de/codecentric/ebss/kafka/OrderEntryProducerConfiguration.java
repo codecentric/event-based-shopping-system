@@ -5,8 +5,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -24,6 +22,9 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.GenericMessage;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+
 import de.codecentric.ebss.model.Address;
 import de.codecentric.ebss.model.Order;
 import de.codecentric.ebss.model.Recipient;
@@ -31,18 +32,18 @@ import de.codecentric.ebss.model.Recipient;
 @Configuration
 public class OrderEntryProducerConfiguration {
 
+	private Log log = LogFactory.getLog(getClass());
+
 	@Autowired
 	private KafkaConfig kafkaConfig;
 
-	private static final String OUTBOUND_ID = "outbound";
-
-	private Log log = LogFactory.getLog(getClass());
+	public static final String OUTBOUND_ID = "outbound";
 	
 	private ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
 	@Bean
 	@DependsOn(OUTBOUND_ID)
-	CommandLineRunner kickOff(@Qualifier(OUTBOUND_ID + ".input") MessageChannel in) {
+	public CommandLineRunner kickOff(@Qualifier(OUTBOUND_ID + ".input") MessageChannel in) {
 		return args -> {
 			for (int i = 0; i < 100; i++) {
 				Address address = new Address(Locale.GERMANY.getDisplayCountry(), "Colonge", "50667", "Domkloster", "4");
@@ -58,7 +59,7 @@ public class OrderEntryProducerConfiguration {
 	}
 
 	@Bean(name = OUTBOUND_ID)
-	IntegrationFlow producer() {
+	public IntegrationFlow producer() {
 
 		log.info("starting producer flow..");
 

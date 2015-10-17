@@ -17,6 +17,87 @@
 		<div class="alert alert-success">
 			Thank you for ordering <b><span th:text="${movie.title}">Movie</span></b>
 		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<h3 class="panel-title">Order Details</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal">
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">Movie</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="title" th:value="${movie.title}" disabled="true"/>
+						    </div>
+						    <label class="col-sm-2 control-label">Amount</label>
+						    <div class="col-sm-1">
+						      <input type="text" class="form-control" id="amount" th:value="${order.amount}" disabled="true"/>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">Total Sum</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="amount" th:value="${#strings.append(totalPrice,'€')}" disabled="true"/>
+						    </div>
+						</div>
+					</form>
+				</div>
+			  </div>
+		    </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<h3 class="panel-title">Shipping Details</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal">
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">First Name</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="firstName" th:value="${order.recipient.firstName}" disabled="true"/>
+						    </div>
+						    <label class="col-sm-2 control-label">Last Name</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="lastName" th:value="${order.recipient.lastName}" disabled="true"/>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">Street</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="street" th:value="${order.recipient.deliveryAdress.street}" disabled="true"/>
+						    </div>
+						    <label class="col-sm-2 control-label">House No</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="houseNo" th:value="${order.recipient.deliveryAdress.houseNumber}" disabled="true"/>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">City</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="city" th:value="${order.recipient.deliveryAdress.city}" disabled="true"/>
+						    </div>
+						    <label class="col-sm-2 control-label">Postal Code</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="postalCode" th:value="${order.recipient.deliveryAdress.postalCode}" disabled="true"/>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-2 control-label">Country</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="country" th:value="${order.recipient.deliveryAdress.country}" disabled="true"/>
+						    </div>
+						</div>
+					</form>
+				</div>
+			  </div>
+		   </div>
+		</div>
+		
     </div> <!-- /container -->
 
 	<div th:replace="navigation :: footernavigation"></div>

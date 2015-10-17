@@ -35,19 +35,19 @@
 					<div class="form-group">
 					    <label class="col-sm-2 control-label">Title</label>
 					    <div class="col-sm-6">
-					      <input type="text" class="form-control" id="title" th:value="${movie.title}" placeholder="Title" />
+					      <input type="text" class="form-control" id="title" th:value="${movie.title}" disabled="true"/>
 					    </div>
 					</div>
 					<div class="form-group">
 					    <label class="col-sm-2 control-label">Description</label>
 					    <div class="col-sm-6">
-					      <textarea class="form-control" rows="5" id="title" th:field="${movie.shortDescription}" placeholder="Full movie description"></textarea>
+					      <textarea class="form-control" rows="5" id="title" th:field="${movie.shortDescription}" disabled="true"></textarea>
 					    </div>
 					</div>
 					<div class="form-group">
 					    <label class="col-sm-2 control-label">Price</label>
 					    <div class="col-sm-6">
-					      <input type="text" class="form-control" id="title" placeholder="Price" value="10€" />
+					      <input type="text" class="form-control" id="title" value="10€" disabled="true" />
 					    </div>
 					</div>
 				</form>

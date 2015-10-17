@@ -1,8 +1,11 @@
 package de.codecentric.ebss.model;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import org.apache.commons.lang.StringUtils;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 public class Movie {
 
@@ -12,12 +15,14 @@ public class Movie {
 	private Integer year;
 	private String image;
 
+	@NumberFormat(style = Style.CURRENCY)
+	private BigDecimal price = new BigDecimal("12.25");
+
 	public Movie() {
 		this.id = UUID.randomUUID();
 	}
 
-	public Movie(UUID id, String title, String description, Integer year,
-			String image) {
+	public Movie(UUID id, String title, String description, Integer year, String image) {
 		this.id = id;
 		this.title = title;
 		this.description = description;
@@ -76,9 +81,17 @@ public class Movie {
 	public String getDetailLink() {
 		return "movies/" + id;
 	}
-	
+
 	public String getOrderLink() {
 		return "movies/" + id + "/order";
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
 	}
 
 }
